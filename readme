@@ -1,0 +1,29 @@
+Revision Control: https://github.com/JhDrathian/CS4780_Project1
+
+Program: runsim
+	runsim : Spawns children processes up to user-defined limit.
+
+	Accepts command line option "-n"
+	-n : Allows the user to input a Process Limit. Input must be a positive integer greater than 0.
+	-n : Usage : 
+		-n 5
+		-n 10
+		-n 7
+	
+	Program expects standard input to complete task of spawning children.
+		1.) Child Program name: ./testsim
+		2.) Sleep Time (number of seconds to sleep)
+		3.) Repeat Factor (Number of loop reptitions)
+	Recommended Usage: Redirect a file into stdin
+		runsim -n 1 < file
+	File : Usage
+		File should contain delimited standard input replacement
+	File : Example
+		./testsim 1 2
+		./testsim 3 4
+
+Program: testsim
+	testsim : Accepts input from parent program to performs a task
+		Repeat Factor : Program will repeat task based on specified factor
+		Task : Program will sleep for specified sleep time, declare it's PID, and state how long it slept.
+	
